@@ -19,9 +19,16 @@ data/
     └── <point_id>_<longitude>_<latitude>_<heading>.jpg
 ```
 
+## 下载与校验
+
+```bash
+gh release download v1.0.0 --repo Aspartame-yao/nanshan-street-view-processed
+shasum -a 256 -c RELEASE_ASSETS.sha256
+for file in *part-*.tar; do tar -xf "$file"; done
+```
+
 本仓库不包含模型调用脚本、API 密钥、访问令牌、请求日志或云存储凭据。
 
 ## 使用说明
 
 原始影像的权利仍归相应权利人所有，处理结果不改变其权利状态。使用者需自行确认研究、展示和再分发权限。
-
